@@ -1,3 +1,5 @@
+const { log } = require('console');
+
 // Initialisation
 const markdownLinkPattern = /\[(.*?)\]\((.*?)\)/;
 const urlPattern =
@@ -60,14 +62,10 @@ class Article {
     }
 }
 
-// Execution du code
-return convertToArticles($input.all());
-
 // Fonction principale
-export function convertToArticles(params) {
-  console.log("run", params)
+function convertToArticles(params) {
     var articles = params.map((item) => {
-        return convertToArticle(item.json); // item.json
+        return convertToArticle(item); // item.json
     });
 
     return articles;
@@ -160,3 +158,10 @@ function convertToCategory(content) {
     // Retourner la catégorie correspondante ou PutAside par défaut
     return categoryMap[content] || Category.PutAside;
 }
+
+function healthCheck() {
+    console.log("OK");
+    return "OK";
+}
+
+module.exports = { healthCheck, convertToArticles };
