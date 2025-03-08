@@ -62,15 +62,6 @@ class Article {
     }
 }
 
-// Fonction principale
-function convertToArticles(params) {
-    var articles = params.map((item) => {
-        return convertToArticle(item); // item.json
-    });
-
-    return articles;
-}
-
 function convertToArticle(article) {
     var urls = extractRegexPattern(article.content, markdownLinkPattern);
     var descriptionWithoutLinks = removeRegexPattern(
@@ -164,4 +155,16 @@ function healthCheck() {
     return "OK";
 }
 
-module.exports = { healthCheck, convertToArticles };
+function testToto(data){
+    return data;
+}
+
+function convertToArticles(params) {
+    var articles = params.map((item) => {
+        return convertToArticle(item); // item.json
+    });
+
+    return articles;
+}
+
+module.exports = { convertToArticles, healthCheck, testToto };

@@ -1,6 +1,6 @@
 {
   "name": "@victorprouff/n8n-envrac",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "index.js",
   "scripts": {
     "test": "exit 0"
@@ -21,5 +21,8 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@victorprouff/n8n-envrac": "^1.0.2"
   }
 }
