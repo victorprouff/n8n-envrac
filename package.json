@@ -1,5 +1,5 @@
 {
-  "name": "n8n-envrac",
+  "name": "@victorprouff/n8n-envrac",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
